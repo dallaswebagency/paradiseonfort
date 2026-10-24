@@ -36,8 +36,8 @@ h2 em,h1 em{font-style:italic;color:var(--terra)}
 .strip{background:var(--maroon);color:#f3e2c2;font-size:13.5px;padding:8px 0}
 .strip .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 nav{position:sticky;top:0;z-index:50;background:rgba(29,17,13,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,177,124,.25);color:#f3e2c2}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
-.logo img{height:62px;width:auto}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:112px}
+.logo img,.flogo img{height:92px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.55)) brightness(1.12) contrast(1.05)}
 .menu{display:flex;gap:30px;align-items:center;font-size:15px}
 .menu a:not(.btn){position:relative;padding:4px 0}
 .menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-2px;height:1.5px;width:0;background:var(--terra);transition:.3s}
@@ -47,7 +47,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:8
 .menu a:not(.btn)::after{background:var(--stone)}
 
 /* hero */
-.hero{position:relative;min-height:calc(100vh - 120px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--maroon)}
+.hero{position:relative;min-height:calc(100vh - 148px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--maroon)}
 .hero .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;transform:scale(1.04)}
 .hero .slide.on{opacity:1;animation:kb 12s ease-out forwards}
 @keyframes kb{to{transform:scale(1.12)}}
@@ -144,11 +144,32 @@ form{display:grid;gap:14px}
 form input,form textarea{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}
 form textarea{min-height:130px;resize:vertical}
 
-footer{background:#1d110d;color:#bda88a;padding:56px 0 30px;font-size:15px}
-footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
-footer img{height:60px;margin-bottom:14px}
-footer ul{list-style:none;display:grid;gap:6px}
-footer .copy{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:22px;font-size:13.5px;width:100%}
+footer{background:#1d110d;color:#bda88a;font-size:15px;position:relative}
+.fcta{background:linear-gradient(90deg,var(--maroon),#7a2a1f);color:#f6e8cf;padding:44px 0}
+.fcta .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.fcta h3{font-size:clamp(28px,3.4vw,42px);color:#fff}
+.fcta h3 em{color:var(--stone)}
+.fcta .acts{display:flex;gap:12px;flex-wrap:wrap}
+.fmain{padding:64px 0 40px}
+.fmain .wrap{display:grid;grid-template-columns:1.5fr 1fr 1.2fr 1.3fr;gap:44px}
+.flogo{display:inline-block;margin-bottom:18px}
+.fmain p{line-height:1.7;margin-bottom:12px}
+footer h4{font-family:var(--serif);font-size:23px;color:#fff;margin-bottom:16px;position:relative;padding-bottom:12px}
+footer h4::after{content:"";position:absolute;left:0;bottom:0;width:38px;height:2px;background:var(--stone)}
+footer ul{list-style:none;display:grid;gap:9px}
+footer ul a{transition:.25s}
+footer ul a:hover{color:var(--stone);padding-left:5px}
+footer .ci{display:grid;gap:12px}
+footer .ci a{color:#f3e2c2}
+footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin-bottom:2px}
+.fpay{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.fpay span{border:1px solid rgba(212,177,124,.35);border-radius:999px;padding:4px 14px;font-size:13px;color:#f3e2c2}
+.fthumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.fthumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;opacity:.85;transition:.3s}
+.fthumbs img:hover{opacity:1;transform:scale(1.06)}
+.fbar{border-top:1px solid rgba(255,255,255,.1);padding:22px 0;font-size:13.5px}
+.fbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.fbar a{color:var(--stone)}
 .float{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--terra);color:#fff;border-radius:999px;padding:14px 22px;font-weight:500;box-shadow:0 10px 30px rgba(0,0,0,.3)}
 
 /* lightbox */
@@ -162,7 +183,8 @@ footer .copy{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-t
 
 @media (max-width:960px){
   section{padding:76px 0}
-  .menu{display:none;position:absolute;top:84px;left:0;right:0;background:#1d110d;flex-direction:column;padding:24px;border-bottom:1px solid rgba(212,177,124,.25);gap:18px}
+  nav .wrap{height:92px}.logo img,.flogo img{height:70px}
+  .menu{display:none;position:absolute;top:92px;left:0;right:0;background:#1d110d;flex-direction:column;padding:24px;border-bottom:1px solid rgba(212,177,124,.25);gap:18px}
   .menu.open{display:flex}.burger{display:block}
   .story,.desk-grid,.contact,.vgrid{grid-template-columns:1fr;gap:44px}
   .types{grid-template-columns:1fr}
@@ -170,11 +192,12 @@ footer .copy{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-t
   .feature{grid-template-columns:1fr}.feature .tile{min-height:420px}
   .desk ol{grid-template-columns:1fr}
   .arch .small{right:-10px}
+  .fmain .wrap{grid-template-columns:1fr 1fr;gap:38px}
   .hero-in{padding-bottom:300px}
   .book{grid-template-columns:1fr 1fr}.book .btn{grid-column:1/-1;justify-content:center}
   .dots{display:none}
 }
-@media (max-width:520px){.strip .wrap{justify-content:center;text-align:center}.hero-in{padding-bottom:340px}.book{grid-template-columns:1fr}}
+@media (max-width:520px){.fmain .wrap{grid-template-columns:1fr}.strip .wrap{justify-content:center;text-align:center}.hero-in{padding-bottom:340px}.book{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -373,18 +396,71 @@ footer .copy{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-t
 </section>
 
 <footer>
-  <div class="wrap">
-    <div><img src="assets/logo.png" alt="Hotel Paradise Palace on Fort" style="height:72px"><p>Inside Fort, Jaisalmer 345001, Rajasthan, India</p></div>
-    <ul>
-      <li><a href="#palace">The Palace</a></li><li><a href="#rooms">Rooms &amp; Facilities</a></li><li><a href="#traveldesk">Travel Desk</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#guests">Testimonials</a></li><li><a href="#contact">Contact</a></li>
-    </ul>
-    <ul>
-      <li><a href="tel:+919414149501">+91 9414149501</a></li>
-      <li><a href="mailto:hotelparadise_jsm2001@yahoo.co.in">hotelparadise_jsm2001@yahoo.co.in</a></li>
-      <li><a href="http://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">TripAdvisor</a></li>
-    </ul>
-    <div class="copy">&copy; Hotel Paradise Palace Jaisalmer. All rights reserved.</div>
+  <div class="fcta"><div class="wrap">
+    <h3>Ready to stay inside the <em>fort</em>?</h3>
+    <div class="acts">
+      <a class="btn btn-solid" href="http://hotels.eglobe-solutions.com/paradiseonfort/booking/detail#bookingsteps" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-line" href="tel:+919414149501">Call +91 9414149501</a>
+    </div>
+  </div></div>
+
+  <div class="fmain"><div class="wrap">
+    <div>
+      <a class="flogo" href="#top"><img src="assets/logo.png" alt="Hotel Paradise Palace on Fort"></a>
+      <p>A 400 year old part of the Maharaja's palace, once home to royal guests, now a quiet courtyard stay just off the main square of Jaisalmer Fort.</p>
+      <p>Owner Captain Chandra Shripat and his team will do their utmost to make your stay an enjoyable and memorable holiday.</p>
+      <div class="fpay"><span>Visa</span><span>Mastercard</span><span>Currency exchange</span></div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#palace">The Palace</a></li>
+        <li><a href="#rooms">Rooms &amp; Facilities</a></li>
+        <li><a href="#traveldesk">Travel Desk</a></li>
+        <li><a href="#gallery">Photo Gallery</a></li>
+        <li><a href="#guests">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="http://hotels.eglobe-solutions.com/paradiseonfort/booking/detail#bookingsteps" target="_blank" rel="noopener">Book Online</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Travel Desk</h4>
+      <ul>
+        <li>Camel, village and jeep safari</li>
+        <li>Tailor made tours</li>
+        <li>Car services around India</li>
+        <li>Pickups from railway, bus and airport</li>
+        <li>Tour guides on request</li>
+        <li>Air, bus and railway tickets</li>
+        <li>Hotel reservations around India</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Find &amp; Reach Us</h4>
+      <div class="ci">
+        <div><b>Address</b>Hotel Paradise Palace, Inside Fort,<br>Jaisalmer 345001, Rajasthan, India</div>
+        <div><b>Reservations</b><a href="tel:+919414149501">+91 9414149501</a> (Captain Chandra Shripat)</div>
+        <div><b>Email</b><a href="mailto:hotelparadise_jsm2001@yahoo.co.in">hotelparadise_jsm2001@yahoo.co.in</a></div>
+        <div><b>Reviews</b><a href="http://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Find us on TripAdvisor</a></div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="wrap" style="padding-bottom:36px">
+    <div class="fthumbs">
+      <img src="https://paradiseonfort.in/images/photo_gallery/thumbs/01.jpg" alt="" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://paradiseonfort.in/images/photo_gallery/thumbs/02.jpg" alt="" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://paradiseonfort.in/images/photo_gallery/thumbs/03.jpg" alt="" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://paradiseonfort.in/images/photo_gallery/thumbs/04.jpg" alt="" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://paradiseonfort.in/images/photo_gallery/thumbs/05.jpg" alt="" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://paradiseonfort.in/images/photo_gallery/thumbs/06.jpg" alt="" loading="lazy" referrerpolicy="no-referrer">
+    </div>
   </div>
+
+  <div class="fbar"><div class="wrap">
+    <span>&copy; Hotel Paradise Palace Jaisalmer. All rights reserved.</span>
+    <a href="#top">Back to top &uarr;</a>
+  </div></div>
 </footer>
 
 <a class="float" href="tel:+919414149501">Call to book</a>
