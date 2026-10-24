@@ -64,7 +64,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;min-heig
 .dots button.on{background:#fff}
 .book{position:relative;z-index:4;margin:0 auto;width:min(1000px,100% - 40px);background:var(--ivory);color:var(--ink);border-radius:18px 18px 0 0;padding:22px 28px;display:grid;grid-template-columns:1.1fr .7fr auto;gap:22px;align-items:end;box-shadow:0 -10px 40px rgba(0,0,0,.18)}
 .book label{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.book input,.book select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;font-size:16px}
+.book input,.book select{height:52px;width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;font-size:16px}
 .book-note{display:none}
 
 /* story */
@@ -168,18 +168,15 @@ section{padding:110px 0}
 .gcard .who small{color:var(--muted);font-size:13px}
 .gcard .stars{color:#e0a21d;letter-spacing:.12em}
 .gcard p{color:var(--ink);font-size:16px}
-.gphotos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
-.gphotos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;cursor:zoom-in;transition:.35s;background:var(--sand)}
-.gphotos img:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;height:100%}
-.gphotos img:nth-child(4){grid-column:span 2;aspect-ratio:auto;height:100%}
-.gphotos img:hover{transform:scale(1.02)}
-@media (max-width:960px){.ghead{grid-template-columns:1fr}.greviews .rgrid{grid-template-columns:1fr}.gphotos{grid-template-columns:1fr 1fr}.gphotos img:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}}
+@media (max-width:960px){.ghead{grid-template-columns:1fr}.greviews .rgrid{grid-template-columns:1fr}}
 /* contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 .card{background:var(--maroon);color:#f3e2c2;border-radius:20px;padding:44px}
 .card h3{font-size:34px;color:#fff;margin-bottom:18px}
 .card p{margin-bottom:14px}
-.card a{border-bottom:1px solid rgba(243,226,194,.4)}
+.card a{border-bottom:1px solid rgba(243,226,194,.4);overflow-wrap:anywhere}
+.card .big{overflow-wrap:normal}
+.contact>*{min-width:0}
 .card .big{font-family:var(--serif);font-size:34px;color:var(--stone);border:0;display:block;margin:4px 0 2px}
 form{display:grid;gap:14px}
 form input,form textarea{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}
@@ -230,7 +227,7 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
   nav .wrap{min-height:92px}.logo img,.flogo img{height:70px}
   .menu{display:none;position:absolute;top:92px;left:0;right:0;background:#1d110d;flex-direction:column;padding:24px;border-bottom:1px solid rgba(212,177,124,.25);gap:18px}
   .menu.open{display:flex}.burger{display:block}
-  .story,.desk-grid,.contact,.vgrid{grid-template-columns:1fr;gap:44px}
+  .story,.desk-grid,.contact,.vgrid{grid-template-columns:minmax(0,1fr);gap:44px}
   .types{grid-template-columns:1fr}
   .band .wrap{grid-template-columns:1fr 1fr;row-gap:34px}
   .feature{grid-template-columns:1fr}.feature .tile{min-height:420px}
@@ -240,7 +237,7 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
   .book{grid-template-columns:1fr 1fr}.book .btn{grid-column:1/-1;justify-content:center}
   .dots{display:none}
 }
-@media (max-width:520px){.fmain .wrap{grid-template-columns:1fr}.strip .wrap{justify-content:center;text-align:center}.book{grid-template-columns:1fr}}
+@media (max-width:520px){.gal{columns:2 140px;column-gap:8px}.gal img{margin-bottom:8px;border-radius:8px}.gcard .top{flex-direction:column;align-items:flex-start;gap:10px}.gcard{padding:24px 22px}.card{padding:32px 24px}.card .big{font-size:28px}.card h3{font-size:30px}.voice{padding:30px 24px}.gscore{padding:26px 28px}.type{padding:24px}.btn{padding:14px 24px}.fmain .wrap{grid-template-columns:1fr}.strip .wrap{justify-content:center;text-align:center}.book{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -412,10 +409,10 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
         <h4>Guest Comments</h4>
         <div class="tb tb1">
           <img class="tl" src="https://www.tripadvisor.in/img/cdsi/img2/branding/150_logo-11900-2.png" alt="Tripadvisor" referrerpolicy="no-referrer">
-          <a class="tname" href="http://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Paradise Hotel</a>
+          <a class="tname" href="https://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Paradise Hotel</a>
           <small>Tripadvisor Ranking</small>
           <div class="rank">#31 of 304 B&amp;Bs in Jaisalmer</div>
-          <div class="tlinks"><a href="http://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Read reviews</a><span></span><a href="https://www.tripadvisor.in/UserReview-g297667-d678057-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Write a review</a></div>
+          <div class="tlinks"><a href="https://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Read reviews</a><span></span><a href="https://www.tripadvisor.in/UserReview-g297667-d678057-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Write a review</a></div>
         </div>
       </div>
       <div class="tcol">
@@ -423,7 +420,7 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
         <div class="tb tb2">
           <div class="bravo">Bravo!</div>
           <div class="tb2b">
-            <a href="http://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Paradise Hotel rated &ldquo;excellent&rdquo; by 129 travellers</a>
+            <a href="https://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Paradise Hotel rated &ldquo;excellent&rdquo; by 129 travellers</a>
             <img class="tl" src="https://www.tripadvisor.in/img/cdsi/img2/branding/150_logo-11900-2.png" alt="Tripadvisor" referrerpolicy="no-referrer">
           </div>
         </div>
@@ -459,12 +456,6 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
         <div class="top"><div class="who"><div class="av">A</div><div><b>Abhishek</b><small>Solo traveller, a month ago</small></div></div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
         <p>I visited their rooftop caf&eacute; for breakfast, lunch, and dinner during my time in Jaisalmer. The rooftop has a great atmosphere, especially for enjoying a meal and taking in the surroundings. The food was good, but what really stood out was the hospitality.</p>
       </div>
-    </div>
-    <div class="gphotos rv">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SVLcmlOO-u3YXN4JUeXUfJQzZd-3nS8Z65q25w9lDFoz4LNHfnMon1E9swFqvT7ay8oc4Cx_178MWpmPyaj20DTH4nS4YBs41D2gLn9OwOVPEPZ4dpYZqYNi8cFcsf7gf4f_Q=w1200" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QThE2f_4GUM_fb-eOyszg1uyfxwz95rT-Yet35TV227rX4mZ4t7-47tx1sBKUdz9k8pp0gL8vdlpqUen7VCPMDdY7IrDbWJQof37KlOXnbcBYSCjEblMkPk7n5RJpkDcP85R4=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QMxdHYdAwZOpFqASm-HafRWuzkyuI013ffu7kr47XO0aCmEODvR6ElOEc0gYYP61l3yr2ya81DL-nE7MXTie0PRRDNKPLQPhgTqgHmQyDC1GI5TeOPof42NVwgDrTL1dE8IzZ_tg=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TmMudRXvHzHIZLDrPf1PCm6PEv-qFwVg60h8jnEMlyZOMODgC1GdEC6eEYE9pX0SDBG7tsUvwpl1fuSDOrwbJByHu_YYFuIChx5X9usby-tDrAC4D-CdZJqnOOh0bHmHMj=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
     </div>
     <p class="center rv" style="margin-top:36px"><a class="btn btn-dark" href="https://www.google.com/travel/search?q=hotel%20paradise%20palace%20jaisalmer" target="_blank" rel="noopener">Read all reviews on Google</a></p>
   </div>
@@ -540,7 +531,7 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
         <div><b>Address</b>Hotel Paradise Palace, Inside Fort,<br>Jaisalmer 345001, Rajasthan, India</div>
         <div><b>Reservations</b><a href="tel:+919414149501">+91 9414149501</a> (Captain Chandra Shripat)</div>
         <div><b>Email</b><a href="mailto:hotelparadise_jsm2001@yahoo.co.in">hotelparadise_jsm2001@yahoo.co.in</a></div>
-        <div><b>Reviews</b><a href="http://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Find us on TripAdvisor</a></div>
+        <div><b>Reviews</b><a href="https://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Find us on TripAdvisor</a></div>
       </div>
     </div>
   </div></div>
@@ -577,7 +568,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 // lightbox
 const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
-document.querySelectorAll('.gal img,.rail img,.gphotos img').forEach(im=>im.onclick=()=>{lbi.src=im.src;lb.classList.add('on')});
+document.querySelectorAll('.gal img,.rail img').forEach(im=>im.onclick=()=>{lbi.src=im.src;lb.classList.add('on')});
 lb.onclick=()=>lb.classList.remove('on');
 // close menu on click
 document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.menu').classList.remove('open')));
