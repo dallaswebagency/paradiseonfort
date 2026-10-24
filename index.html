@@ -36,7 +36,8 @@ h2 em,h1 em{font-style:italic;color:var(--terra)}
 .strip{background:var(--maroon);color:#f3e2c2;font-size:13.5px;padding:8px 0}
 .strip .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 nav{position:sticky;top:0;z-index:50;background:rgba(29,17,13,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,177,124,.25);color:#f3e2c2}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:112px}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:112px;padding:10px 0}
+.logo,.flogo{line-height:0}
 .logo img,.flogo img{height:92px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.55)) brightness(1.12) contrast(1.05)}
 .menu{display:flex;gap:30px;align-items:center;font-size:15px}
 .menu a:not(.btn){position:relative;padding:4px 0}
@@ -47,12 +48,12 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:1
 .menu a:not(.btn)::after{background:var(--stone)}
 
 /* hero */
-.hero{position:relative;min-height:calc(100vh - 148px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--maroon)}
+.hero{position:relative;min-height:max(640px,calc(100vh - 148px));display:flex;flex-direction:column;justify-content:flex-end;color:#fff;overflow:hidden;background:var(--maroon)}
 .hero .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;transform:scale(1.04)}
 .hero .slide.on{opacity:1;animation:kb 12s ease-out forwards}
 @keyframes kb{to{transform:scale(1.12)}}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(42,14,12,.45) 0%,rgba(42,14,12,.25) 35%,rgba(42,14,12,.85) 100%)}
-.hero-in{position:relative;z-index:2;padding:80px 0 150px;max-width:760px}
+.hero-in{position:relative;z-index:2;padding:90px 0 56px;max-width:760px}
 .hero h1{font-size:clamp(46px,7.4vw,100px);margin:14px 0 20px;color:#fff}
 .hero h1 em{color:var(--stone)}
 .hero p{font-size:19px;max-width:560px;color:#f6e8cf;margin-bottom:32px}
@@ -61,10 +62,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:1
 .dots{position:absolute;z-index:3;right:max(20px,calc((100% - 1180px)/2));top:50%;display:flex;flex-direction:column;gap:12px}
 .dots button{width:11px;height:11px;border-radius:50%;border:1.5px solid #fff;background:transparent;cursor:pointer;padding:0}
 .dots button.on{background:#fff}
-.book{position:absolute;z-index:4;left:50%;bottom:-1px;transform:translateX(-50%);width:min(1000px,100% - 40px);background:var(--ivory);color:var(--ink);border-radius:18px 18px 0 0;padding:22px 28px;display:grid;grid-template-columns:1.1fr .7fr auto;gap:22px;align-items:end;box-shadow:0 -10px 40px rgba(0,0,0,.18)}
+.book{position:relative;z-index:4;margin:0 auto;width:min(1000px,100% - 40px);background:var(--ivory);color:var(--ink);border-radius:18px 18px 0 0;padding:22px 28px;display:grid;grid-template-columns:1.1fr .7fr auto;gap:22px;align-items:end;box-shadow:0 -10px 40px rgba(0,0,0,.18)}
 .book label{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .book input,.book select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;font-size:16px}
-.book-note{grid-column:1/-1;font-size:13px;color:var(--muted);margin-top:-6px}
+.book-note{display:none}
 
 /* story */
 section{padding:110px 0}
@@ -183,7 +184,7 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
 
 @media (max-width:960px){
   section{padding:76px 0}
-  nav .wrap{height:92px}.logo img,.flogo img{height:70px}
+  nav .wrap{min-height:92px}.logo img,.flogo img{height:70px}
   .menu{display:none;position:absolute;top:92px;left:0;right:0;background:#1d110d;flex-direction:column;padding:24px;border-bottom:1px solid rgba(212,177,124,.25);gap:18px}
   .menu.open{display:flex}.burger{display:block}
   .story,.desk-grid,.contact,.vgrid{grid-template-columns:1fr;gap:44px}
@@ -193,11 +194,10 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
   .desk ol{grid-template-columns:1fr}
   .arch .small{right:-10px}
   .fmain .wrap{grid-template-columns:1fr 1fr;gap:38px}
-  .hero-in{padding-bottom:300px}
   .book{grid-template-columns:1fr 1fr}.book .btn{grid-column:1/-1;justify-content:center}
   .dots{display:none}
 }
-@media (max-width:520px){.fmain .wrap{grid-template-columns:1fr}.strip .wrap{justify-content:center;text-align:center}.hero-in{padding-bottom:340px}.book{grid-template-columns:1fr}}
+@media (max-width:520px){.fmain .wrap{grid-template-columns:1fr}.strip .wrap{justify-content:center;text-align:center}.book{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
