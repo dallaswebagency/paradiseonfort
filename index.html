@@ -171,6 +171,7 @@ section{padding:110px 0}
 .gphotos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
 .gphotos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;cursor:zoom-in;transition:.35s;background:var(--sand)}
 .gphotos img:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;height:100%}
+.gphotos img:nth-child(4){grid-column:span 2;aspect-ratio:auto;height:100%}
 .gphotos img:hover{transform:scale(1.02)}
 @media (max-width:960px){.ghead{grid-template-columns:1fr}.greviews .rgrid{grid-template-columns:1fr}.gphotos{grid-template-columns:1fr 1fr}.gphotos img:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}}
 /* contact */
@@ -221,6 +222,10 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
 .rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
 .rv.in{opacity:1;transform:none}
 
+@media (max-width:1240px){
+  .menu{display:none;position:absolute;top:112px;left:0;right:0;background:#1d110d;flex-direction:column;padding:24px;border-bottom:1px solid rgba(212,177,124,.25);gap:18px}
+  .menu.open{display:flex}.burger{display:block}
+}
 @media (max-width:960px){
   section{padding:76px 0}
   nav .wrap{min-height:92px}.logo img,.flogo img{height:70px}
@@ -461,9 +466,7 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
       <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SVLcmlOO-u3YXN4JUeXUfJQzZd-3nS8Z65q25w9lDFoz4LNHfnMon1E9swFqvT7ay8oc4Cx_178MWpmPyaj20DTH4nS4YBs41D2gLn9OwOVPEPZ4dpYZqYNi8cFcsf7gf4f_Q=w1200" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
       <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QThE2f_4GUM_fb-eOyszg1uyfxwz95rT-Yet35TV227rX4mZ4t7-47tx1sBKUdz9k8pp0gL8vdlpqUen7VCPMDdY7IrDbWJQof37KlOXnbcBYSCjEblMkPk7n5RJpkDcP85R4=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
       <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QMxdHYdAwZOpFqASm-HafRWuzkyuI013ffu7kr47XO0aCmEODvR6ElOEc0gYYP61l3yr2ya81DL-nE7MXTie0PRRDNKPLQPhgTqgHmQyDC1GI5TeOPof42NVwgDrTL1dE8IzZ_tg=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TN_efe9YlLbsmQdGa5vO9y9TBcwZopMrtfrqIWu2192bJW_wvZ2_NhxVr9v6RxXbEYUeFE9soHHfzv-xq46JRyoh-Iq7zCcdCO_6geVYsPxgm9vROFp80VoSvyqmFreev42j2x=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
       <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TmMudRXvHzHIZLDrPf1PCm6PEv-qFwVg60h8jnEMlyZOMODgC1GdEC6eEYE9pX0SDBG7tsUvwpl1fuSDOrwbJByHu_YYFuIChx5X9usby-tDrAC4D-CdZJqnOOh0bHmHMj=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SO5lISE4gEDnXBXKMjokZ75NI6X94dj3H2uS1LVnSF5GO2cld0ByebZ_c23hGi13P4P5OrJNgQ7DmkwHbpRQ62oH_uiZCIOpjXQkxR9IipqgUz5DuXCvwOSbkIkkDCXHW1GQU-FRPvzSuW=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
     </div>
     <p class="center rv" style="margin-top:36px"><a class="btn btn-dark" href="https://www.google.com/travel/search?q=hotel%20paradise%20palace%20jaisalmer" target="_blank" rel="noopener">Read all reviews on Google</a></p>
   </div>
