@@ -134,6 +134,45 @@ section{padding:110px 0}
 .ta{margin-top:34px;display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:15px}
 .ta img{height:34px;width:auto}
 
+/* tripadvisor badges */
+.tabadges{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:46px}
+.tcol h4{font-family:var(--serif);font-size:24px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--maroon);margin-bottom:14px}
+.tb{background:#fff;border:2px solid #00e87b;color:#002b11;font-family:Arial,Helvetica,sans-serif;line-height:1.3}
+.tb a{color:#002b11;text-decoration:underline}
+.tb1{width:340px;padding:22px 24px}
+.tb1 .tl{height:32px;width:auto;margin-bottom:14px}
+.tb1 .tname{display:block;font-size:30px;font-weight:700;margin-bottom:14px}
+.tb1 small{display:block;font-size:14px}
+.tb1 .rank{font-size:21px;margin:4px 0 10px}
+.tb1 .tlinks{display:flex;gap:12px;align-items:center;font-size:14px}
+.tb1 .tlinks span{width:2px;height:20px;background:#c8c8c8}
+.tb2{width:280px}
+.tb2 .bravo{background:#00e87b;color:#002b11;font-size:34px;font-weight:700;text-align:center;padding:8px}
+.tb2 .tb2b{padding:16px 18px 18px;text-align:center;font-size:17px}
+.tb2 .tb2b a{display:block;margin-bottom:14px}
+.tb2 .tl{height:32px;width:auto;margin:0 auto}
+/* google reviews */
+.greviews{background:var(--ivory)}
+.ghead{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;margin-bottom:44px}
+.gscore{background:var(--maroon);color:#f6e8cf;border-radius:20px;padding:30px 38px;text-align:center}
+.gscore b{display:block;font-family:var(--serif);font-size:84px;line-height:.9;color:var(--stone)}
+.gscore .st{color:#f2b84b;letter-spacing:.2em;font-size:20px;margin:8px 0 4px}
+.gscore span{font-size:14px;letter-spacing:.08em}
+.greviews .rgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.gcard{border:1px solid var(--line);border-radius:16px;padding:28px 30px;background:#fff;transition:.3s}
+.gcard:hover{box-shadow:0 14px 34px rgba(90,29,34,.12);transform:translateY(-4px)}
+.gcard .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.gcard .who{display:flex;gap:12px;align-items:center}
+.gcard .av{width:44px;height:44px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:22px}
+.gcard .who b{display:block;line-height:1.2}
+.gcard .who small{color:var(--muted);font-size:13px}
+.gcard .stars{color:#e0a21d;letter-spacing:.12em}
+.gcard p{color:var(--ink);font-size:16px}
+.gphotos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+.gphotos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;cursor:zoom-in;transition:.35s;background:var(--sand)}
+.gphotos img:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;height:100%}
+.gphotos img:hover{transform:scale(1.02)}
+@media (max-width:960px){.ghead{grid-template-columns:1fr}.greviews .rgrid{grid-template-columns:1fr}.gphotos{grid-template-columns:1fr 1fr}.gphotos img:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}}
 /* contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 .card{background:var(--maroon);color:#f3e2c2;border-radius:20px;padding:44px}
@@ -216,6 +255,7 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
     <a href="#traveldesk">Travel Desk</a>
     <a href="#gallery">Gallery</a>
     <a href="#guests">Testimonials</a>
+    <a href="#google">Reviews</a>
     <a href="#contact">Contact</a>
     <a class="btn btn-solid" href="http://hotels.eglobe-solutions.com/paradiseonfort/booking/detail#bookingsteps" target="_blank" rel="noopener">Book Online</a>
   </div>
@@ -364,10 +404,68 @@ footer .ci b{display:block;color:var(--stone);font-size:12px;letter-spacing:.2em
       <div class="voice rv"><p>It's Alex here. I stayed with you the last few days with my girlfriend Amy. I just wanted to send an email to thank you for everything you have done for us. Your hotel is a fantastic treasure in India and has been the highlight of our trip. The rooms, building, and atmosphere of Paradise is a massive credit to the tourist industry of Jaisalmer. Yesterday our train ticket was cancelled and we would have been completely stranded if it wasn't for the fantastic assistance of Paradise's team. Paradise Hotel is a true credit to India, a gem in the desert. Thank you all so very much.</p><b>Alex and Amy</b></div>
       <div class="voice rv"><p>Hotel Paradise, located just off the square in the fort, is a quiet, cool, well managed place to stay. Rooms are comfortable and clean and the staff is helpful and ready to attend to any needs. One of the best parts of the hotel is the lovely tree shaded courtyard in the centre that provides a cool respite from the hot desert air. Many facilities are provided including camel safaris and day trips into the desert. From the rooftop terrace there are lovely views of Jaisalmer city and the desert beyond. Captain Chandra, owner of the hotel, and his staff will provide you with any assistance.</p><b>Mr. Bernic</b></div>
     </div>
-    <div class="ta rv">
-      <img src="https://www.tripadvisor.in/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" referrerpolicy="no-referrer" onerror="this.style.display='none'">
-      <a class="btn btn-dark" href="http://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Read our reviews on TripAdvisor</a>
+    <div class="tabadges rv">
+      <div class="tcol">
+        <h4>Guest Comments</h4>
+        <div class="tb tb1">
+          <img class="tl" src="https://www.tripadvisor.in/img/cdsi/img2/branding/150_logo-11900-2.png" alt="Tripadvisor" referrerpolicy="no-referrer">
+          <a class="tname" href="http://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Paradise Hotel</a>
+          <small>Tripadvisor Ranking</small>
+          <div class="rank">#31 of 304 B&amp;Bs in Jaisalmer</div>
+          <div class="tlinks"><a href="http://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Read reviews</a><span></span><a href="https://www.tripadvisor.in/UserReview-g297667-d678057-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Write a review</a></div>
+        </div>
+      </div>
+      <div class="tcol">
+        <h4>Service Excellence</h4>
+        <div class="tb tb2">
+          <div class="bravo">Bravo!</div>
+          <div class="tb2b">
+            <a href="http://www.tripadvisor.in/Hotel_Review-g297667-d678057-Reviews-Hotel_Paradise-Jaisalmer_Rajasthan.html" target="_blank" rel="noopener">Paradise Hotel rated &ldquo;excellent&rdquo; by 129 travellers</a>
+            <img class="tl" src="https://www.tripadvisor.in/img/cdsi/img2/branding/150_logo-11900-2.png" alt="Tripadvisor" referrerpolicy="no-referrer">
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="greviews" id="google">
+  <div class="wrap">
+    <div class="ghead rv">
+      <div class="gscore"><b>4.3</b><div class="st">&#9733;&#9733;&#9733;&#9733;&#9734;</div><span>218 Google reviews</span></div>
+      <div>
+        <span class="eyebrow">Google Reviews</span>
+        <h2>Guests say it <em>best</em></h2>
+        <p style="color:var(--muted);max-width:560px">Real words from travellers who stayed or dined with us, taken from our Google listing.</p>
+      </div>
+    </div>
+    <div class="rgrid">
+      <div class="gcard rv">
+        <div class="top"><div class="who"><div class="av">Y</div><div><b>Yati Vijay</b><small>Family trip, 11 months ago</small></div></div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+        <p>I recently stayed at Hotel Paradise Palace, Jaisalmer, and it was an absolutely wonderful experience! The hotel gives a true heritage vibe as it&rsquo;s located right inside the Jaisalmer Fort. &hellip; I&rsquo;d highly recommend this place to anyone visiting Jaisalmer, especially families looking for a budget-friendly yet authentic experience.</p>
+      </div>
+      <div class="gcard rv">
+        <div class="top"><div class="who"><div class="av">A</div><div><b>Aman Kumar</b><small>Couple, 10 months ago</small></div></div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+        <p>We had a great stay at Paradise Hotel inside Jaisalmer Fort. The rooms were clean, comfortable, and well-maintained. Staff was friendly and always ready to help. The rooftop caf&eacute; was one of the highlights, the food was really good and the view from the top made the experience even better.</p>
+      </div>
+      <div class="gcard rv">
+        <div class="top"><div class="who"><div class="av">S</div><div><b>Syed Imtiazur Rahman</b><small>7 months ago</small></div></div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+        <p>Good hotel inside the Jaisalmer fort. The best category room is heritage room which have a balcony. And the view from the balcony is excellent. &hellip; Staff behavior is great. Location, room is good. Service is also great.</p>
+      </div>
+      <div class="gcard rv">
+        <div class="top"><div class="who"><div class="av">A</div><div><b>Abhishek</b><small>Solo traveller, a month ago</small></div></div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+        <p>I visited their rooftop caf&eacute; for breakfast, lunch, and dinner during my time in Jaisalmer. The rooftop has a great atmosphere, especially for enjoying a meal and taking in the surroundings. The food was good, but what really stood out was the hospitality.</p>
+      </div>
+    </div>
+    <div class="gphotos rv">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SVLcmlOO-u3YXN4JUeXUfJQzZd-3nS8Z65q25w9lDFoz4LNHfnMon1E9swFqvT7ay8oc4Cx_178MWpmPyaj20DTH4nS4YBs41D2gLn9OwOVPEPZ4dpYZqYNi8cFcsf7gf4f_Q=w1200" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QThE2f_4GUM_fb-eOyszg1uyfxwz95rT-Yet35TV227rX4mZ4t7-47tx1sBKUdz9k8pp0gL8vdlpqUen7VCPMDdY7IrDbWJQof37KlOXnbcBYSCjEblMkPk7n5RJpkDcP85R4=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QMxdHYdAwZOpFqASm-HafRWuzkyuI013ffu7kr47XO0aCmEODvR6ElOEc0gYYP61l3yr2ya81DL-nE7MXTie0PRRDNKPLQPhgTqgHmQyDC1GI5TeOPof42NVwgDrTL1dE8IzZ_tg=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TN_efe9YlLbsmQdGa5vO9y9TBcwZopMrtfrqIWu2192bJW_wvZ2_NhxVr9v6RxXbEYUeFE9soHHfzv-xq46JRyoh-Iq7zCcdCO_6geVYsPxgm9vROFp80VoSvyqmFreev42j2x=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TmMudRXvHzHIZLDrPf1PCm6PEv-qFwVg60h8jnEMlyZOMODgC1GdEC6eEYE9pX0SDBG7tsUvwpl1fuSDOrwbJByHu_YYFuIChx5X9usby-tDrAC4D-CdZJqnOOh0bHmHMj=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SO5lISE4gEDnXBXKMjokZ75NI6X94dj3H2uS1LVnSF5GO2cld0ByebZ_c23hGi13P4P5OrJNgQ7DmkwHbpRQ62oH_uiZCIOpjXQkxR9IipqgUz5DuXCvwOSbkIkkDCXHW1GQU-FRPvzSuW=w900" alt="Hotel Paradise Palace, Jaisalmer, guest photo" loading="lazy" referrerpolicy="no-referrer">
+    </div>
+    <p class="center rv" style="margin-top:36px"><a class="btn btn-dark" href="https://www.google.com/travel/search?q=hotel%20paradise%20palace%20jaisalmer" target="_blank" rel="noopener">Read all reviews on Google</a></p>
   </div>
 </section>
 
@@ -479,7 +577,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 // lightbox
 const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
-document.querySelectorAll('.gal img,.rail img').forEach(im=>im.onclick=()=>{lbi.src=im.src;lb.classList.add('on')});
+document.querySelectorAll('.gal img,.rail img,.gphotos img').forEach(im=>im.onclick=()=>{lbi.src=im.src;lb.classList.add('on')});
 lb.onclick=()=>lb.classList.remove('on');
 // close menu on click
 document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.menu').classList.remove('open')));
